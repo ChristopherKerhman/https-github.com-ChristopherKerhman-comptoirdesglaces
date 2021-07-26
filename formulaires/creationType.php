@@ -8,7 +8,6 @@ if ($_GET) {
   }
 }
  ?>
-
 <article class="">
   <h3>Enregistrement d'un nouveau type de produits</h3>
   <form class="" action="formulaires/record/type.php" method="post" enctype="multipart/form-data">
