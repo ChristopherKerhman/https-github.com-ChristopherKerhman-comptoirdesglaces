@@ -1,4 +1,5 @@
 <?php
+include 'restriction/session.php';
 $titre = 'Back-Office du site Le comptoire des glaces';
  ?>
 <!DOCTYPE html>
