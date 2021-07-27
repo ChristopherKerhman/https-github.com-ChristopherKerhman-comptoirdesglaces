@@ -9,7 +9,7 @@
   </tr>
   <?php
 
-  // Lecture de la table Produits afin de créer un rappel des types de produits existant.
+  // Lecture de la table Types afin de créer un rappel des types de produits existant.
   include 'gestionDB/identifiantDB.php';
   $requetteSQL = "SELECT `idTypeProduits`, `type` FROM `typePorduits`";
   include 'gestionDB/readDB.php';

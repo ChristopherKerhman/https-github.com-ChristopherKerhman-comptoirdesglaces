@@ -4,12 +4,11 @@ include '../../gestionDB/identifiantDB.php';
 include '../functionsFormulaire.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-  var_dump($_POST);
   $nom = filter($_POST['nom']);
   $idTypeProduits = filter($_POST['idTypeProduits']);
   $stock = filter($_POST['stock']);
   $prixUnitaire = filter($_POST['prixUnitaire']);
-  $requetteSQL = "INSERT INTO `Produits`(`nom`, `idTypeProduits`, `stock`, `prixUnitaire`) VALUES (:nom, :idTypeProduits, :stock, :prixUnitaire)";
+  $requetteSQL = "INSERT INTO `Produits`(`nom`, `idTypeProduit`, `stock`, `prixUnitaire`) VALUES (:nom, :idTypeProduits, :stock, :prixUnitaire)";
   include '../../gestionDB/readDB.php';
   $data->bindParam(':nom', $nom);
   $data->bindParam(':idTypeProduits', $idTypeProduits);
