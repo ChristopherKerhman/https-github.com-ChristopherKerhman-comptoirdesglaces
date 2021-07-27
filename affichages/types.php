@@ -26,15 +26,15 @@
           <td>'.$key['type'].'</td>
           <td>
             <form class="" action="formulaires/edit/type.php" method="post" enctype="multipart/form-data">
-              <input type="text" name="type" value="'.$key['type'].'">
+              <input class="sizeInpute" type="text" name="type" value="'.$key['type'].'">
               <input type="hidden" name="idTypeProduits" value="'.$key['idTypeProduits'].'">
-              <button type="submit" name="button">Modifier</button>
+              <button class="edit" type="submit" name="button">Modifier</button>
             </form>
           </td>
           <td>
             <form class="" action="formulaires/del/type.php" method="post" enctype="multipart/form-data">
               <input type="hidden" name="idTypeProduits" value="'.$key['idTypeProduits'].'">
-              <button type="submit" name="button">Effacer</button>
+              <button class="del" type="submit" name="button">Effacer</button>
             </form>
           </td>
         </tr>';

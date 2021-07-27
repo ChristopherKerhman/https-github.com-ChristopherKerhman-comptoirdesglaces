@@ -11,6 +11,7 @@ $titre = 'Back-Office du site Le comptoire des glaces';
   </head>
   <body>
 <header>
+  <h1><?php echo $titre ?></h1>
   <?php
    include 'gestionDB/identifiantDB.php';
    $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation >= 1 ORDER BY `idNavigator` DESC";
@@ -19,8 +20,8 @@ $titre = 'Back-Office du site Le comptoire des glaces';
    $data->setFetchMode(PDO::FETCH_ASSOC);
    $dataTraiter = $data->fetchAll();
    ?>
-  <h3>Menu de navigation</h3>
     <nav>
+        <h3>Menu de navigation</h3>
       <ul class="listNavigation">
         <?php
         foreach ($dataTraiter as $key) {
