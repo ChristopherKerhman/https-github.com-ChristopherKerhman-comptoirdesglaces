@@ -32,10 +32,19 @@ $dataTraiter = $data->fetchAll();
     <label for="prix">Prix unitaire (€ TTC) :<?php echo $dataTraiter[0]['prixUnitaire']; ?> €</label>
     <input class="sizeInpute"  id="prix" type="number" step="0.01" name="prixUnitaire" value="<?php echo $dataTraiter[0]['prixUnitaire']; ?>"> €
     <label for="dispo">En stock ?</label>
-    <select id="dispo" class="" name="stock">
-      <option value="1" selected>Oui</option>
-      <option value="0">Non</option>
-    </select>
+    <?php
+    if ($dataTraiter[0]['stock'] == 1) {
+      echo '<select id="dispo" class="" name="stock">
+          <option value="1" selected>Oui</option>
+          <option value="0">Non</option>
+        </select>';
+    } else {
+      echo '<select id="dispo" class="" name="stock">
+          <option value="1">Oui</option>
+          <option value="0" selected>Non</option>
+        </select>';
+    }
+     ?>
     <input type="hidden" name="idTri" value="<?php echo $dataTraiter[0]['idProduits']; ?>">
     <button class="edit" type="submit" name="button">Modifier</button>
   </form>
