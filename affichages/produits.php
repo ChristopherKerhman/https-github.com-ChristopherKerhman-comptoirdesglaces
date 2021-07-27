@@ -1,14 +1,17 @@
 <article class="">
-<h3>Les types déjà enregisté ?</h3>
+<h3>Les produits déjà enregisté ?</h3>
 <table>
   <tr>
-    <td>ID type</td>
+    <td>ID produit</td>
+    <td>Type de produits</td>
     <td>Description</td>
     <td>Modifier</td>
     <td>Supprimer</td>
+    <td>stock</td>
+    <td>Prix unitaire</td>
   </tr>
   <?php
-
+/*
   // Lecture de la table Produits afin de créer un rappel des types de produits existant.
   include 'gestionDB/identifiantDB.php';
   $requetteSQL = "SELECT `idTypeProduits`, `type` FROM `typePorduits`";
@@ -39,7 +42,7 @@
           </td>
         </tr>';
     }
-  }
+  }*/
    ?>
 </table>
 </article>

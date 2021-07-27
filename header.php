@@ -14,7 +14,7 @@ $titre = 'Back-Office du site Le comptoire des glaces';
   <h1><?php echo $titre ?></h1>
   <?php
    include 'gestionDB/identifiantDB.php';
-   $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation >= 1 ORDER BY `idNavigator` DESC";
+   $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation >= 1 ORDER BY `idNavigator` ASC";
    include 'gestionDB/readDB.php';
    $data->execute();
    $data->setFetchMode(PDO::FETCH_ASSOC);
