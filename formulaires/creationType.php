@@ -8,14 +8,13 @@ if ($_GET) {
   }
 }
  ?>
-
 <article class="">
   <h3>Enregistrement d'un nouveau type de produits</h3>
   <form class="" action="formulaires/record/type.php" method="post" enctype="multipart/form-data">
     <label for="typeName">Type de produit :</label>
-    <input  id="typeName" type="text" name="type" placeholder="Nouveau type de produit">
+    <input class="sizeInpute"  id="typeName" type="text" name="type" placeholder="Nouveau type de produit">
     <?php if (isset($_GET['error'])) {echo $message;} ?>
-    <button type="submit" name="button">Enregistrer</button>
+    <button class="rec" type="submit" name="button">Enregistrer</button>
   </form>
   <?php if (isset($_GET['sucess'])) {echo $message;} ?>
 </article>

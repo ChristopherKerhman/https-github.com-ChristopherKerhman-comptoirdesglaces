@@ -1,10 +1,109 @@
+/*==Présentation générale centré==*/
 body {
-  background-color: white;
+  display: block;
+  background-color:  #424242;
   color :black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  margin-bottom: auto;
+}
+header {
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #adfaff;
+  background-color: #dadada;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 200;
+}
+section {
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 1em;
+  border: 2px solid  #adfaff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dadada;
 }
 td {
+  background-color: white;
   border: 1px inset black;
+  border-radius: 0.5em;
   text-align: center;
   padding-left: 0.2em;
   padding-right: 0.2em;
+}
+.listNavigation {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.lienNav {
+  color : black;
+  text-decoration: none;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+.lienNav:focus {
+  color: green;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 200;
+}
+/*==Input==*/
+.sizeInpute {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+/*==Button==*/
+button {
+  background: none;
+  border: 2px solid;
+  border-radius: 0.2em;
+  background-color:
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+}
+.edit {
+  background-color: #98ff6b;
+}
+.edit:hover {
+  background-color: #6fff31 ;
+}
+.del {
+   background-color: #ff6b6b;
+}
+.del:hover {
+  background-color: #ff2424;
+}
+.rec {
+  background-color: #4d63fd;
+}
+.rec:hover {
+  color: white;
+  background-color: #0020ff;
+}
+/*==Responsivité==*/
+@media only screen and (max-width: 980px) {
+  body {
+    font-size: 1.5em;
+  }
 }
