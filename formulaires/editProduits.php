@@ -21,7 +21,11 @@ $dataTraiter = $data->fetchAll();
     <select id="type" class="" name="idTypeProduit">
       <?php
       foreach ($typage as $key) {
+        if ($key['idTypeProduits'] == $dataTraiter[0]['idTypeProduit']) {
+        echo '<option value="'.$key['idTypeProduits'].'" selected>'.$key['type'].'</option>';
+      } else {
         echo '<option value="'.$key['idTypeProduits'].'">'.$key['type'].'</option>';
+      }
       }
        ?>
     </select>
