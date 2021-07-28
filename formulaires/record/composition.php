@@ -5,14 +5,14 @@ include '../functionsFormulaire.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Traitement de l'image d'une composition
-  $image = filter($_FILES['image']['name']);
+  $image = rand(0,124).filter($_FILES['image']['name']);
   if($_FILES['image']['size'] >= 1000000) {
     $sizeMo = $_FILES['image']['size']/10000;
     echo 'Trop volumineux';
     header('location:../../formComposition.php?Error="trop volumineurx'.$sizeMo.'"');
   } else {
   if (($_FILES['image']['type'] == 'image/png') || ($_FILES['image']['type'] == 'image/jpeg')) {
-    move_uploaded_file($_FILES['image']['tmp_name'],$f = '../../compositionImages/'.$_FILES['image']['name']);
+    move_uploaded_file($_FILES['image']['tmp_name'],$f = '../../compositionImages/'.$image);
       chmod($f, 0777);
   } else {
       header('location:../../formComposition.php?Error2="png ou jpeg seulement."');

@@ -18,7 +18,7 @@
   $dataTraiter = $data->fetchAll();
   // Affichage des éléments de la liste.
   if (empty($dataTraiter)) {
-    echo 'Aucun produit enregistré dans la table type de produit';
+    echo 'Aucun type enregistré.';
   } else {
     foreach ($dataTraiter as $key) {
       echo '<tr>
