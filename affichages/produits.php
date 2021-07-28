@@ -1,5 +1,5 @@
 <article class="">
-<h3>Les produits déjà enregisté ?</h3>
+<h3>Les produits déjà enregisté</h3>
 <table>
   <tr>
     <td>ID produit</td>
