@@ -17,9 +17,8 @@ var_dump($_POST);
   $data->bindParam(':stock', $stock);
   $data->bindParam(':idTri', $idTri);
   $data->execute();
-  header ('location: ../../formProduits.php');
+    header ('location: ../../formProduits.php');
 } else {
-  echo 'coucou';
     header ('location: ../../formProduits.php');
 }
  ?>

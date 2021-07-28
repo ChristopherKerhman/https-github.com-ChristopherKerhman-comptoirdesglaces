@@ -21,6 +21,7 @@ include 'functionsFormulaire.php';
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $search = filter($_POST['search']);
+  $_SESSION['search'] = $search;
   $requetteSQL = "SELECT `idProduits`, `nom`, `idTypeProduit`, `stock`, `prixUnitaire`, `typePorduits`.`type` FROM `Produits` INNER JOIN typePorduits WHERE `nom` LIKE :search AND `Produits`.`idTypeProduit` = `typePorduits`.`idTypeProduits`";
   include 'gestionDB/readDB.php';
   $data->bindParam(':search', $search);
