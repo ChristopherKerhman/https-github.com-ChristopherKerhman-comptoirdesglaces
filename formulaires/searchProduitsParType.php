@@ -5,7 +5,7 @@ include 'functionsFormulaire.php';
 <h3>Tri par type de Produits</h3>
 <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
   <label for="type">Type de produit</label>
-  <select id="type" class="" name="search">
+  <select class="sizeInpute" id="type" class="" name="search">
     <option value="0" selected>-</option>
     <?php
     $requetteSQL = "SELECT `idTypeProduits`, `type` FROM `typePorduits`";

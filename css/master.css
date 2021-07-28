@@ -73,6 +73,12 @@ td {
   font-style: italic;
   font-weight: 200;
 }
+/*==Conteneur standard==*/
+.conteneurFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 /*==Input==*/
 .sizeInpute {
   margin: 0.5em;
@@ -123,6 +129,9 @@ button {
   body {
     font-size: 1.5em;
   }
+  .conteneurFlex {
+    flex-direction: column;
+  }
   .listNavigation {
     flex-direction: column;
   }
@@ -132,6 +141,9 @@ button {
     font-size: 0.9em;
   }
   .listNavigation {
+    flex-direction: column;
+  }
+  .conteneurFlex {
     flex-direction: column;
   }
 }

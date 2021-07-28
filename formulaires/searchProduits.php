@@ -3,7 +3,8 @@ include 'gestionDB/identifiantDB.php';
 include 'functionsFormulaire.php';
  ?>
 <h3>Recherche Produits</h3>
-<p>Recherche d'un produit par son nom (utiliser %lettre% pour filtrer) :</p>
+<p>Recherche d'un produit par son nom (utiliser %lettre% pour filtrer) :
+</p>
 <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
  <input class="sizeInpute" type="text" name="search" size="30" placeholder="Recherche d'un produits par son nom">
  <button class="search" type="submit" name="button">Rechercher</button>
@@ -21,7 +22,6 @@ include 'functionsFormulaire.php';
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $search = filter($_POST['search']);
-  $_SESSION['search'] = $search;
   $requetteSQL = "SELECT `idProduits`, `nom`, `idTypeProduit`, `stock`, `prixUnitaire`, `typePorduits`.`type` FROM `Produits` INNER JOIN typePorduits WHERE `nom` LIKE :search AND `Produits`.`idTypeProduit` = `typePorduits`.`idTypeProduits`";
   include 'gestionDB/readDB.php';
   $data->bindParam(':search', $search);

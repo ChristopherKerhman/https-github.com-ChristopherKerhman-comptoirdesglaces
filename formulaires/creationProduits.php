@@ -21,7 +21,7 @@ $dataTraiter = $data->fetchAll();
     <input class="sizeInpute"  id="typeName" type="text" name="nom" placeholder="Nouveau produit">
     <?php if (isset($_GET['error'])) {echo $message;} ?>
     <label for="type">Type de produit</label>
-    <select id="type" class="" name="idTypeProduits">
+    <select class="sizeInpute" id="type" class="" name="idTypeProduits">
       <?php
       foreach ($dataTraiter as $key) {
         echo '<option value="'.$key['idTypeProduits'].'">'.$key['type'].'</option>';
@@ -31,7 +31,7 @@ $dataTraiter = $data->fetchAll();
     <label for="prix">Prix unitaire (€ TTC) :</label>
     <input class="sizeInpute"  id="prix" type="number" step="0.01" name="prixUnitaire" placeholder="prix unitaire à la vente en €">
     <label for="dispo">En stock ?</label>
-    <select id="dispo" class="" name="stock">
+    <select class="sizeInpute" id="dispo" class="" name="stock">
       <option value="1" selected>Oui</option>
       <option value="0">Non</option>
     </select>

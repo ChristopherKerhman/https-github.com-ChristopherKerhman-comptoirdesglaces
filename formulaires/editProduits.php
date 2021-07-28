@@ -18,7 +18,7 @@ $dataTraiter = $data->fetchAll();
     <label for="typeName">Produit :</label>
     <input class="sizeInpute"  id="typeName" type="text" name="nom" value="<?php echo $dataTraiter[0]['nom']; ?>">
     <label for="type">Type de produit</label>
-    <select id="type" class="" name="idTypeProduit">
+    <select class="sizeInpute" id="type" class="" name="idTypeProduit">
       <?php
       foreach ($typage as $key) {
         if ($key['idTypeProduits'] == $dataTraiter[0]['idTypeProduit']) {
@@ -34,12 +34,12 @@ $dataTraiter = $data->fetchAll();
     <label for="dispo">En stock ?</label>
     <?php
     if ($dataTraiter[0]['stock'] == 1) {
-      echo '<select id="dispo" class="" name="stock">
+      echo '<select class="sizeInpute" id="dispo" class="" name="stock">
           <option value="1" selected>Oui</option>
           <option value="0">Non</option>
         </select>';
     } else {
-      echo '<select id="dispo" class="" name="stock">
+      echo '<select class="sizeInpute" id="dispo" class="" name="stock">
           <option value="1">Oui</option>
           <option value="0" selected>Non</option>
         </select>';
