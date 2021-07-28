@@ -2,10 +2,22 @@
 include 'gestionDB/identifiantDB.php';
 include 'functionsFormulaire.php';
  ?>
-<h3>Recherche Produits</h3>
-<p>Recherche d'un produit par son nom (utiliser %lettre% pour filtrer) :</p>
+<h3>Tri par type de Produits</h3>
 <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
- <input class="sizeInpute" type="text" name="search" size="30" placeholder="Recherche d'un produits par son nom">
+  <label for="type">Type de produit</label>
+  <select id="type" class="" name="search">
+    <option value="0" selected>-</option>
+    <?php
+    $requetteSQL = "SELECT `idTypeProduits`, `type` FROM `typePorduits`";
+    include 'gestionDB/readDB.php';
+    $data->execute();
+    $data->setFetchMode(PDO::FETCH_ASSOC);
+    $dataTraiter = $data->fetchAll();
+    foreach ($dataTraiter as $key) {
+      echo '<option value="'.$key['idTypeProduits'].'">'.$key['type'].'</option>';
+    }
+     ?>
+  </select>
  <button class="search" type="submit" name="button">Rechercher</button>
 </form>
 <table>
@@ -22,7 +34,7 @@ include 'functionsFormulaire.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $search = filter($_POST['search']);
   $_SESSION['search'] = $search;
-  $requetteSQL = "SELECT `idProduits`, `nom`, `idTypeProduit`, `stock`, `prixUnitaire`, `typePorduits`.`type` FROM `Produits` INNER JOIN typePorduits WHERE `nom` LIKE :search AND `Produits`.`idTypeProduit` = `typePorduits`.`idTypeProduits`";
+  $requetteSQL = "SELECT `idProduits`, `nom`, `idTypeProduit`, `stock`, `prixUnitaire`, `typePorduits`.`type` FROM `Produits` INNER JOIN typePorduits WHERE `typePorduits`.`idTypeProduits` = :search AND `Produits`.`idTypeProduit` = `typePorduits`.`idTypeProduits`";
   include 'gestionDB/readDB.php';
   $data->bindParam(':search', $search);
   $data->execute();
