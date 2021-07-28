@@ -21,7 +21,6 @@ $titre = 'Back-Office du site Le comptoire des glaces';
    $dataTraiter = $data->fetchAll();
    ?>
     <nav>
-        <h3>Menu de navigation</h3>
       <ul class="listNavigation">:
         <?php
         foreach ($dataTraiter as $key) {
