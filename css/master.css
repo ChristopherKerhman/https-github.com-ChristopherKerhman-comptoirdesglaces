@@ -110,6 +110,14 @@ button {
   color: white;
   background-color: #0020ff;
 }
+.search {
+  background-color: #b491ff;
+}
+.search:hover {
+  color: white;
+  background-color: #9b6cff;
+}
+
 /*==Responsivité==*/
 @media only screen and (max-width: 980px) {
   body {
