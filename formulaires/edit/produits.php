@@ -8,7 +8,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $prixUnitaire = filter($_POST['prixUnitaire']);
   $stock = filter($_POST['stock']);
   $idTri = filter($_POST['idTri']);
-var_dump($_POST);
   $requetteSQL = "UPDATE `Produits` SET `nom`=:nom,`idTypeProduit`=:idTypeProduit,`stock`=:stock,`prixUnitaire`=:prixUnitaire WHERE `idProduits`= :idTri";
   include '../../gestionDB/readDB.php';
   $data->bindParam(':nom', $nom);

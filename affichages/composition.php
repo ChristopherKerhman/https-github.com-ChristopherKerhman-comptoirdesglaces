@@ -20,17 +20,26 @@
     echo 'Aucune composition enregistrées.';
   } else {
     foreach ($dataTraiter as $key) {
-      echo  '<tr>
+      echo  '
+      <tr>
         <td>'.$key['idComposition'].'</td>
         <td>'.$key['nomComposition'].'</td>
         <td>'.$key['prixComposition'].'</td>
         <td><img src="compositionImages/'.$key['image'].'" alt="coupes '.$key['nomComposition'].'" width=80%></td>
-        <td>Modifier</td>
-        <td>  <form class="" action="formulaires/del/composition.php" method="post" enctype="multipart/form-data">
+        <td>
+        <form class="" action="editComposition.php" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="image" value="'.$key['image'].'">
+          <input type="hidden" name="idComposition" value="'.$key['idComposition'].'">
+          <button class="edit" type="submit" name="button">Modifier</button>
+        </form>
+        </td>
+          <td>
+            <form class="" action="formulaires/del/composition.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="image" value="'.$key['image'].'">
             <input type="hidden" name="idComposition" value="'.$key['idComposition'].'">
             <button class="del" type="submit" name="button">Effacer</button>
-            </td>
+            </form>
+          </td>
       </tr>';
     }
   }

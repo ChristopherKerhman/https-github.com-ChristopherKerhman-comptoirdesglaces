@@ -79,6 +79,9 @@ td {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.affichageImage {
+  width: 40%;
+}
 /*==Input==*/
 .sizeInpute {
   margin: 0.5em;
