@@ -42,10 +42,13 @@ section {
   justify-content: center;
   background-color: #dadada;
 }
+table {
+  border: 3px inset #ffe26a;
+  border-radius: 3px;
+}
 td {
   background-color: white;
   border: 1px inset black;
-  border-radius: 0.5em;
   text-align: center;
   padding-left: 0.2em;
   padding-right: 0.2em;
