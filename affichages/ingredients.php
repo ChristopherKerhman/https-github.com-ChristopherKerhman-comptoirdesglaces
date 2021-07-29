@@ -12,7 +12,10 @@ $dataTraiter = $data->fetchAll();
       echo '<li>Pas d\'ingrédient dans cette recette.</li>';
     } else {
       foreach ($dataTraiter as $key) {
-        echo '<li>'.$key['nombre'].' '.$key['type'].' '.$key['nom'].'</li>';
+        echo '<li class="listeConteneur"><form class="" action="formulaires/del/ingredient.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="idRecette" value="'.$key['idRecette'].'">
+            <button class="del" type="submit" name="button">Effacer</button>
+        </form> '.$key['nombre'].' '.$key['type'].' '.$key['nom'].'</li>';
       }
     }
    ?>

@@ -86,12 +86,7 @@ echo '<h3>'.$nomComposition.' '.$prixComposition.' €</h3>'
   echo 'Pas encore de données à rechercher.';
  }
  ?>
-
  </table>
  </article>
-</form>
-
-
-
 </section>
 <?php include 'footer.php'; ?>
