@@ -39,6 +39,7 @@ echo '<h3>'.$nomComposition.' '.$prixComposition.' €</h3>'
     <td>ID produit</td>
     <td>nom du produits</td>
     <td>Type</td>
+    <td>Nombre</td>
     <td>Ajouter</td>
   </tr>
  <?php
@@ -65,19 +66,27 @@ echo '<h3>'.$nomComposition.' '.$prixComposition.' €</h3>'
         <td>'.$key['idProduits'].'</td>
         <td>'.$key['nom'].'</td>
         <td>'.$key['type'].'</td>
+        <form class="" action="formulaires/record/addIngredientRecette.php" method="post" enctype="multipart/form-data">
         <td>
-          <form class="" action="AddIngredientRecette.php" method="post" enctype="multipart/form-data">
+        <select class="sizeInpute" name="nombre">
+           <option value="1" selected>Une</option>
+           <option value="2">Deux</option>
+           <option value="3">Trois</option>
+         </select>
+         </td>
+        <td>
           <input type="hidden" name="idProduits" value="'.$key['idProduits'].'">
           <input type="hidden" name="idComposition" value="'.$idComposition.'">
           <button class="edit" type="submit" name="button">Ajouter</button>
-          </form>
         </td>
+        </form>
       </tr>';
   }
  } else {
   echo 'Pas encore de données à rechercher.';
  }
  ?>
+
  </table>
  </article>
 </form>

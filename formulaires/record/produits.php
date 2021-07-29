@@ -2,7 +2,6 @@
 include '../../restriction/session.php';
 include '../../gestionDB/identifiantDB.php';
 include '../functionsFormulaire.php';
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   $nom = filter($_POST['nom']);
   $idTypeProduits = filter($_POST['idTypeProduits']);
