@@ -4,7 +4,6 @@ include '../../gestionDB/identifiantDB.php';
 include '../functionsFormulaire.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  var_dump($_POST);
   $idTypeProduits = filter($_POST['idTypeProduits']);
   $requetteSQL = "DELETE FROM `typePorduits` WHERE `idTypeProduits` = :idTypeProduits";
   include '../../gestionDB/readDB.php';

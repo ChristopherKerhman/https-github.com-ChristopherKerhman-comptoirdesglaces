@@ -26,7 +26,11 @@
         <td>'.$key['prixComposition'].'</td>
         <td><img src="compositionImages/'.$key['image'].'" alt="coupes '.$key['nomComposition'].'" width=80%></td>
         <td>Modifier</td>
-        <td>Supprimer</td>
+        <td>  <form class="" action="formulaires/del/composition.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="image" value="'.$key['image'].'">
+            <input type="hidden" name="idComposition" value="'.$key['idComposition'].'">
+            <button class="del" type="submit" name="button">Effacer</button>
+            </td>
       </tr>';
     }
   }
