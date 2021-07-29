@@ -12,7 +12,7 @@ $dataTraiter = $data->fetchAll();
       echo '<li>Pas d\'ingrédient dans cette recette.</li>';
     } else {
       foreach ($dataTraiter as $key) {
-        echo '<li> '.$key['type'].' '.$key['nom'].'</li>';
+        echo '<li>'.$key['nombre'].' '.$key['type'].' '.$key['nom'].'</li>';
       }
     }
    ?>
