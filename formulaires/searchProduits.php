@@ -2,7 +2,8 @@
 include 'gestionDB/identifiantDB.php';
 include 'functionsFormulaire.php';
  ?>
-<h3>Recherche Produits</h3>
+ <article>
+   <h3>Recherche Produits</h3>
 <p>Recherche d'un produit par son nom (utiliser %lettre% pour filtrer) :
 </p>
 <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">

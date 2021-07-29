@@ -6,8 +6,7 @@
     <td>Nom</td>
     <td>Prix</td>
     <td>Images</td>
-    <td>Modifier</td>
-    <td>Supprimer</td>
+    <td>Créer recette</td>
   </tr>
 <?php
   include 'gestionDB/identifiantDB.php';
@@ -27,19 +26,13 @@
         <td>'.$key['prixComposition'].' €</td>
         <td><img src="compositionImages/'.$key['image'].'" alt="coupes '.$key['nomComposition'].'" width=80%></td>
         <td>
-        <form class="" action="editComposition.php" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="image" value="'.$key['image'].'">
+        <form class="" action="creationRecette.php" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="prixComposition" value="'.$key['prixComposition'].'">
+          <input type="hidden" name="nomComposition" value="'.$key['nomComposition'].'">
           <input type="hidden" name="idComposition" value="'.$key['idComposition'].'">
-          <button class="edit" type="submit" name="button">Modifier</button>
+          <button class="edit" type="submit" name="button">Créer</button>
         </form>
         </td>
-          <td>
-            <form class="" action="formulaires/del/composition.php" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="image" value="'.$key['image'].'">
-            <input type="hidden" name="idComposition" value="'.$key['idComposition'].'">
-            <button class="del" type="submit" name="button">Effacer</button>
-            </form>
-          </td>
       </tr>';
     }
   }
