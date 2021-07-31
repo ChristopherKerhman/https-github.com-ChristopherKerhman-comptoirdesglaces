@@ -23,21 +23,23 @@ function haschage($data) {
   return $data;
 }
 function doublon($donnee){
-  include '../gestionDB/elementDB.php';
-  $requetteSQL = "SELECT `login` FROM `utilisateurs` WHERE `login` = :donnee";
+  $serverName = "localhost";
+  $userName = "zxbkuypj_karine";
+  $password = "W7&nHV)MuHVMg.)&HH";
+  $dbName = "zxbkuypj_CDG";
+  $requetteSQL = "SELECT `speudo` FROM `users` WHERE `speudo` = :donnee";
   try {
-    // On créer une connexion
     $conn = new PDO("mysql:host=$serverName;dbname=$dbName", $userName, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $data = $conn->prepare($requetteSQL);
-    $data->bindParam(':donnee', $donnee);
-    $data->execute();
-    $data->setFetchMode(PDO::FETCH_ASSOC);
-    $dataTraiter = $data->fetchAll();
+      $data = $conn->prepare($requetteSQL);
   } catch(PDOException $e) {
    echo "Error: " . $e->getMessage();
   }
-  if(!empty($dataTraiter)) {
+  $data->bindParam(':donnee', $donnee);
+  $data->execute();
+  $data->setFetchMode(PDO::FETCH_ASSOC);
+  $dataTraiter = $data->fetchAll();
+  if (empty($dataTraiter)) {
     return true;
   } else {
     return false;

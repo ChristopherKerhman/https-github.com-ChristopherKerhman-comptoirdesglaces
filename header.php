@@ -7,6 +7,7 @@ $titre = 'Back-Office du site Le comptoire des glaces';
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/master.css">
+    <script src="https://unpkg.com/vue@next"></script>
     <title><?php echo $titre; ?> </title>
   </head>
   <body>
@@ -21,10 +22,11 @@ $titre = 'Back-Office du site Le comptoire des glaces';
    $dataTraiter = $data->fetchAll();
    ?>
     <nav>
-      <ul class="listNavigation">:
+      <ul class="listNavigation">
+
         <?php
         foreach ($dataTraiter as $key) {
-          echo '<li><a class="lienNav" href="'.$key['lien'].'">'.$key['description'].'</a>:</li>';
+          echo '<li><a class="lienNav" href="'.$key['lien'].'">'.$key['description'].'</a></li>';
         }
          ?>
       </ul>

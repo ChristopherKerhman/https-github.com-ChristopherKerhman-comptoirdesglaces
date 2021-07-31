@@ -14,11 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   $data->bindParam(':stock', $stock);
   $data->bindParam(':prixUnitaire', $prixUnitaire);
   $data->execute();
-  var_dump($_POST);
   header ('location: ../../formProduits.php?success="donnée enregistrée"');
 } else {
   header ('location: ../../formProduits.php?error="Pas de données"');
-  var_dump($_POST);
 }
 
  ?>
