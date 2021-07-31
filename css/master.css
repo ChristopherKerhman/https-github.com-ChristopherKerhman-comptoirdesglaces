@@ -80,6 +80,10 @@ li {
   flex-direction: row;
   align-items: baseline;
 }
+.listeVerticale {
+  align-items: baseline;
+  text-align: left;
+}
 .listNavigation {
   list-style: none;
   text-decoration: none;
