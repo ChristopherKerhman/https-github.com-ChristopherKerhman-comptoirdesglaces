@@ -23,8 +23,7 @@ if (empty($dataTraiter)) {
       $role = 'Sans rôle';
     }
     echo '<li class="listeConteneur">
-
-        <form class="" action="formulaires/edit/editUser.php" method="post">
+        <form class="" action="formulaires/edit/user.php" method="post">
             <select class="sizeInpute" name="autorisation">
               <option value="0">Sans rôle</option>
               <option value="1">Utilisateur</option>
