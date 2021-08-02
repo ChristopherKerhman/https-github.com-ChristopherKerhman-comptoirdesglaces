@@ -4,6 +4,7 @@ $autorisation = 2;
   include 'gestionDB/identifiantDB.php';
   include 'formulaires/functionsFormulaire.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $image = filter($_POST['image']);
   $idComposition = filter($_POST['idComposition']);
   $_SESSION['idComposition'] = $idComposition;
   $nomComposition = filter($_POST['nomComposition']);
@@ -65,8 +66,8 @@ echo '<h3>'.$nomComposition.' '.$prixComposition.' €</h3>'
     }
     echo   '<tr>
         <td>'.$key['idProduits'].'</td>
-        <td>'.utf8_encode($key['nom']).'</td>
-        <td>'.utf8_encode($key['type']).'</td>
+        <td>'.$key['nom'].'</td>
+        <td>'.$key['type'].'</td>
         <form class="" action="formulaires/record/addIngredientRecette.php" method="post" enctype="multipart/form-data">
         <td>
         <select class="sizeInpute" name="nombre">

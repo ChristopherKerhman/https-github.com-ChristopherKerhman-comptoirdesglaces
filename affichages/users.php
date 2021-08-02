@@ -40,7 +40,7 @@ if (empty($dataTraiter)) {
             <input type="hidden" name="idUser" value="'.$key['idUser'].'">
             <button class="del" type="submit" name="button">Supprimer</button>
           </form>
-          '.utf8_encode($key['speudo']).' '.$valide.' '.$role.' </li>';
+          '.$key['speudo'].' '.$valide.' '.$role.' </li>';
   }
 }
  ?>

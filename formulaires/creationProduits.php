@@ -24,7 +24,7 @@ $dataTraiter = $data->fetchAll();
     <select class="sizeInpute" id="type" class="" name="idTypeProduits">
       <?php
       foreach ($dataTraiter as $key) {
-        echo '<option value="'.$key['idTypeProduits'].'">'.utf8_encode($key['type']).'</option>';
+        echo '<option value="'.$key['idTypeProduits'].'">'.$key['type'].'</option>';
       }
        ?>
     </select>

@@ -22,9 +22,9 @@ $dataTraiter = $data->fetchAll();
       <?php
       foreach ($typage as $key) {
         if ($key['idTypeProduits'] == $dataTraiter[0]['idTypeProduit']) {
-        echo '<option value="'.$key['idTypeProduits'].'" selected>'.utf8_encode($key['type']).'</option>';
+        echo '<option value="'.$key['idTypeProduits'].'" selected>'.$key['type'].'</option>';
       } else {
-        echo '<option value="'.$key['idTypeProduits'].'">'.utf8_encode($key['type']).'</option>';
+        echo '<option value="'.$key['idTypeProduits'].'">'.$key['type'].'</option>';
       }
       }
        ?>

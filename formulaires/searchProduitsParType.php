@@ -14,7 +14,7 @@ include 'functionsFormulaire.php';
     $data->setFetchMode(PDO::FETCH_ASSOC);
     $dataTraiter = $data->fetchAll();
     foreach ($dataTraiter as $key) {
-      echo '<option value="'.$key['idTypeProduits'].'">'.utf8_encode($key['type']).'</option>';
+      echo '<option value="'.$key['idTypeProduits'].'">'.$key['type'].'</option>';
     }
      ?>
   </select>
@@ -49,8 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     echo   '<tr>
         <td>'.$key['idProduits'].'</td>
-        <td>'.utf8_encode($key['nom']).'</td>
-        <td>'.utf8_encode($key['type']).'</td>
+        <td>'.$key['nom'].'</td>
+        <td>'.$key['type'].'</td>
         <td>'.$key['prixUnitaire'].' €</td>
         <td>'.$stockage.'</td>
         <td>
