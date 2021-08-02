@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   } else {
   if (($_FILES['image']['type'] == 'image/png') || ($_FILES['image']['type'] == 'image/jpeg')) {
     move_uploaded_file($_FILES['image']['tmp_name'],$f = '../../compositionImages/'.$image);
-      chmod($f, 0777);
+      //chmod($f, 0777);
   } else {
       header('location:../../formComposition.php?Error2="png ou jpeg seulement."');
   }
