@@ -101,10 +101,10 @@ li {
   font-weight: 500;
 }
 .lienNav:hover {
-  color: blue;
+  color: #F71AC2;
 }
 .lienNav:focus {
-  color: blue;
+  color: #C611EE;
   text-decoration: underline;
   font-style: italic;
   font-weight: 200;
@@ -209,6 +209,11 @@ button {
   .listNavigation {
     flex-direction: column;
   }
+  .page {
+    width: 98%;
+    max-height: auto;
+    border-top:5px solid red;
+  }
 }
 @media only screen and (max-width: 680px) {
   body {
@@ -219,5 +224,10 @@ button {
   }
   .conteneurFlex {
     flex-direction: column;
+  }
+  .page {
+    width: 98%;
+    max-height: auto;
+    border-top: 5px solid red;
   }
 }
