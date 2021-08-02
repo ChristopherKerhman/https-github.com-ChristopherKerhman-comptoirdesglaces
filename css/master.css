@@ -4,7 +4,7 @@
 body {
   display: block;
     background: rgb(152, 174, 213);
-    height: 200%;
+    height: 100%;
   color :black;
   display: flex;
   flex-direction: column;
@@ -91,7 +91,6 @@ li {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
-
 }
 .lienNav {
   color : black;
@@ -109,6 +108,9 @@ li {
   text-decoration: underline;
   font-style: italic;
   font-weight: 200;
+}
+.deconnexion {
+  height: 100px;
 }
 /*==Conteneur standard==*/
 .conteneurFlex {

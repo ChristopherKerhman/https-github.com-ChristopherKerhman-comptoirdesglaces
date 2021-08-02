@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php
+$autorisation = 2;
+include 'header.php';
+?>
 <section>
   <?php
   include 'affichages/listeRecette.php';
