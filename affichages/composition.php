@@ -24,7 +24,7 @@
       <tr>
         <td>'.$key['idComposition'].'</td>
         <td>'.utf8_encode($key['nomComposition']).'</td>
-        <td>'.utf8_encode($key['prixComposition']).' €</td>
+        <td>'.$key['prixComposition'].' €</td>
         <td><img src="compositionImages/'.$key['image'].'" alt="coupes '.utf8_encode($key['nomComposition']).'" width=80%></td>
         <td>
         <form class="" action="editComposition.php" method="post" enctype="multipart/form-data">

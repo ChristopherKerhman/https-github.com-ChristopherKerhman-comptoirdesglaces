@@ -11,8 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include '../../gestionDB/readDB.php';
     $data->bindParam(':idComposition', $idComposition);
     $data->execute();
-    // Fonctionnalité non disponible online.
-    //unlink ("../../compositionImages/$image");
+    unlink ("../../compositionImages/$image");
     header('location:../../formComposition.php');
 } else {
     header('location:../../formComposition.php');
