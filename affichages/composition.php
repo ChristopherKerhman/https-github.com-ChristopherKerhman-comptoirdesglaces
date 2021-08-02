@@ -23,9 +23,9 @@
       echo  '
       <tr>
         <td>'.$key['idComposition'].'</td>
-        <td>'.$key['nomComposition'].'</td>
-        <td>'.$key['prixComposition'].' €</td>
-        <td><img src="compositionImages/'.$key['image'].'" alt="coupes '.$key['nomComposition'].'" width=80%></td>
+        <td>'.utf8_encode($key['nomComposition']).'</td>
+        <td>'.utf8_encode($key['prixComposition']).' €</td>
+        <td><img src="compositionImages/'.$key['image'].'" alt="coupes '.utf8_encode($key['nomComposition']).'" width=80%></td>
         <td>
         <form class="" action="editComposition.php" method="post" enctype="multipart/form-data">
           <input type="hidden" name="image" value="'.$key['image'].'">

@@ -23,10 +23,10 @@
     foreach ($dataTraiter as $key) {
       echo '<tr>
           <td>'.$key['idTypeProduits'].'</td>
-          <td>'.$key['type'].'</td>
+          <td>'.utf8_encode($key['type']).'</td>
           <td>
             <form class="" action="formulaires/edit/type.php" method="post" enctype="multipart/form-data">
-              <input class="sizeInpute" type="text" name="type" value="'.$key['type'].'">
+              <input class="sizeInpute" type="text" name="type" value="'.utf8_encode($key['type']).'">
               <input type="hidden" name="idTypeProduits" value="'.$key['idTypeProduits'].'">
               <button class="edit" type="submit" name="button">Modifier</button>
             </form>

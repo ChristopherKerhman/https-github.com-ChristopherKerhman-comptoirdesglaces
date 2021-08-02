@@ -65,8 +65,8 @@ echo '<h3>'.$nomComposition.' '.$prixComposition.' €</h3>'
     }
     echo   '<tr>
         <td>'.$key['idProduits'].'</td>
-        <td>'.$key['nom'].'</td>
-        <td>'.$key['type'].'</td>
+        <td>'.utf8_encode($key['nom']).'</td>
+        <td>'.utf8_encode($key['type']).'</td>
         <form class="" action="formulaires/record/addIngredientRecette.php" method="post" enctype="multipart/form-data">
         <td>
         <select class="sizeInpute" name="nombre">

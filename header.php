@@ -37,7 +37,7 @@ $titre = 'Back-Office du site Le comptoire des glaces';
       <ul class="listNavigation">
         <?php
         foreach ($dataTraiter as $key) {
-          echo '<li><a class="lienNav" href="'.$key['lien'].'">'.$key['description'].'</a></li>';
+          echo '<li><a class="lienNav" href="'.utf8_encode($key['lien']).'">'.utf8_encode($key['description']).'</a></li>';
         }
       ?>
       </ul>

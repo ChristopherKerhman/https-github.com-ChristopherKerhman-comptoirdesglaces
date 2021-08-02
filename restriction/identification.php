@@ -13,7 +13,7 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST') && ((!empty($_POST['login']) && (!em
   $dataTraiter = $data->fetchAll();
   // Vérification du mot de passe qui a été haché
   if(password_verify($moria, $dataTraiter[0]['motDePasse']) && $dataTraiter[0]['valide'] == 1) {
-    $_SESSION['login'] = $dataTraiter[0]['speudo'];
+    $_SESSION['login'] = utf8_encode($dataTraiter[0]['speudo']);
     $_SESSION['role'] = $dataTraiter[0]['autorisation'];
     $_SESSION['valide'] = $dataTraiter[0]['valide'];
     $_SESSION['identification'] = true;

@@ -15,7 +15,7 @@ $dataTraiter = $data->fetchAll();
         echo '<li class="listeConteneur"><form class="" action="formulaires/del/ingredient.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="idRecette" value="'.$key['idRecette'].'">
             <button class="del" type="submit" name="button">Effacer</button>
-        </form> '.$key['nombre'].' '.$key['type'].' '.$key['nom'].'</li>';
+        </form> '.$key['nombre'].' '.utf8_encode($key['type']).' '.utf8_encode($key['nom']).'</li>';
       }
     }
    ?>

@@ -38,8 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     echo   '<tr>
         <td>'.$key['idProduits'].'</td>
-        <td>'.$key['nom'].'</td>
-        <td>'.$key['type'].'</td>
+        <td>'.utf8_encode($key['nom']).'</td>
+        <td>'.utf8_encode($key['type']).'</td>
         <td>'.$key['prixUnitaire'].' €</td>
         <td>'.$stockage.'</td>
         <td>
