@@ -25,8 +25,6 @@ $titre = 'Back-Office du site Le comptoire des glaces';
        $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation = 1 ORDER BY `idNavigator` ASC";
      }
    }
-
-
    // Fin des menus
    include 'gestionDB/readDB.php';
    $data->execute();
