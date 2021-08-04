@@ -20,7 +20,7 @@ $titre = 'Back-Office du site Le comptoire des glaces';
     $requetteSQL= "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation = 1 ORDER BY `idNavigator` ASC";
    } else {
      if ($_SESSION['identification'] && $_SESSION['role'] == 2) {
-       $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation >= 1 ORDER BY `idNavigator` ASC";
+       $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation >= 1 AND acreditation <=2 ORDER BY `idNavigator` ASC";
      } else {
        $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation = 1 ORDER BY `idNavigator` ASC";
      }
