@@ -6,7 +6,7 @@ $data->execute();
 $data->setFetchMode(PDO::FETCH_ASSOC);
 $typage = $data->fetchAll();
 // Tri du produit à modifier.
-$requetteSQL = "SELECT `idProduits`, `nom`, `idTypeProduit`, `stock`, `prixUnitaire` FROM `Produits` WHERE `idProduits` =".$idTri;
+$requetteSQL = "SELECT `idProduits`, `nom`, `idTypeProduit`, `stock`, `prixUnitaire`, `composition` FROM `Produits` WHERE `idProduits` =".$idTri;
 include 'gestionDB/readDB.php';
 $data->execute();
 $data->setFetchMode(PDO::FETCH_ASSOC);
@@ -14,8 +14,8 @@ $dataTraiter = $data->fetchAll();
  ?>
 <article class="">
   <h3>Modification du produit <?php echo $dataTraiter[0]['nom']; ?></h3>
-  <form class="" action="formulaires/edit/produits.php" method="post" enctype="multipart/form-data">
-    <label for="typeName">Produit :</label>
+  <form class="conteneurFlexC" action="formulaires/edit/produits.php" method="post" enctype="multipart/form-data">
+    <label for="typeName">Produit : <?php echo $dataTraiter[0]['nom']; ?></label>
     <input class="sizeInpute"  id="typeName" type="text" name="nom" value="<?php echo $dataTraiter[0]['nom']; ?>">
     <label for="type">Type de produit</label>
     <select class="sizeInpute" id="type" class="" name="idTypeProduit">
@@ -30,7 +30,7 @@ $dataTraiter = $data->fetchAll();
        ?>
     </select>
     <label for="prix">Prix unitaire (€ TTC) :<?php echo $dataTraiter[0]['prixUnitaire']; ?> €</label>
-    <input class="sizeInpute"  id="prix" type="number" step="0.01" name="prixUnitaire" value="<?php echo $dataTraiter[0]['prixUnitaire']; ?>"> €
+    <input class="sizeInpute"  id="prix" type="number" step="0.01" name="prixUnitaire" value="<?php echo $dataTraiter[0]['prixUnitaire']; ?>" />
     <label for="dispo">En stock ?</label>
     <?php
     if ($dataTraiter[0]['stock'] == 1) {
@@ -45,7 +45,12 @@ $dataTraiter = $data->fetchAll();
         </select>';
     }
      ?>
+     <label for="description"><?php echo $dataTraiter[0]['composition']; ?></label>
+     <textarea id="description" class="sizeInpute" name="description" rows="3" cols="40">
+       <?php echo $dataTraiter[0]['composition']; ?>
+     </textarea>
     <input type="hidden" name="idTri" value="<?php echo $dataTraiter[0]['idProduits']; ?>">
     <button class="edit" type="submit" name="button">Modifier</button>
+
   </form>
 </article>

@@ -16,7 +16,7 @@ $dataTraiter = $data->fetchAll();
  ?>
 <article class="">
   <h3>Enregistrement d'un nouveau produits</h3>
-  <form class="" action="formulaires/record/produits.php" method="post" enctype="multipart/form-data">
+  <form class="conteneurFlexC" action="formulaires/record/produits.php" method="post" enctype="multipart/form-data">
     <label for="typeName">Produit :</label>
     <input class="sizeInpute"  id="typeName" type="text" name="nom" placeholder="Nouveau produit">
     <?php if (isset($_GET['error'])) {echo $message;} ?>
@@ -35,6 +35,8 @@ $dataTraiter = $data->fetchAll();
       <option value="1" selected>Oui</option>
       <option value="0">Non</option>
     </select>
+    <label for="description">Composition du produit :</label>
+    <textarea id="description" class="sizeInpute" name="description" rows="3" cols="40" placeholder="La composition de votre produit si nécessaire."></textarea>
     <button class="rec" type="submit" name="button">Enregistrer</button>
   </form>
   <?php if (isset($_GET['sucess'])) {echo $message;} ?>
