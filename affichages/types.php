@@ -8,7 +8,6 @@
     <td>Supprimer</td>
   </tr>
   <?php
-
   // Lecture de la table Types afin de créer un rappel des types de produits existant.
   include 'gestionDB/identifiantDB.php';
   $requetteSQL = "SELECT `idTypeProduits`, `type` FROM `typePorduits`";
@@ -28,13 +27,13 @@
             <form class="" action="formulaires/edit/type.php" method="post" enctype="multipart/form-data">
               <input class="sizeInpute" type="text" name="type" value="'.$key['type'].'">
               <input type="hidden" name="idTypeProduits" value="'.$key['idTypeProduits'].'">
-              <button class="edit" type="submit" name="button">Modifier</button>
+              <button class="edit" type="submit" name="button" title="Modifier '.$key['type'].' peut entrainer des soucis sur le menu.">Modifier</button>
             </form>
           </td>
           <td>
             <form class="" action="formulaires/del/type.php" method="post" enctype="multipart/form-data">
               <input type="hidden" name="idTypeProduits" value="'.$key['idTypeProduits'].'">
-              <button class="del" type="submit" name="button">Effacer</button>
+              <button class="del" type="submit" name="button" title="supprimer '.$key['type'].' peut entrainer une panne sur le menu.">Effacer</button>
             </form>
           </td>
         </tr>';

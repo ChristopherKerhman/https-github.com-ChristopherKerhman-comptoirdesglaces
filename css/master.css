@@ -63,6 +63,11 @@ li {
   list-style: none;
 }
 /* Boite pour faire un bouton Randomise */
+.redAlerte {
+  color: red;
+  font-size: 2em;
+  background-color: black;
+}
 .boxe  {
   width: 42px;
   height: 42px;
