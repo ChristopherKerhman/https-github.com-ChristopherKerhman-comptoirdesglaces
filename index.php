@@ -12,7 +12,6 @@ include 'header.php'; ?>
 <section class="conteneurFlex">
   <div class="page">
 <article class="">
-  <h3>Commande en cours :</h3>
     <p>
       <?php
       if ((isset($_SESSION['role'])) && ($_SESSION['role'] == 1)) {
@@ -34,8 +33,18 @@ include 'header.php'; ?>
   if ((isset($_SESSION['role'])) && ($_SESSION['role'] == 2) ) {
       include 'formulaires/creationUsers.php';
   }
+
+  ?>
+<div class="">
+  <?php
+  if ((isset($_SESSION['role'])) && ($_SESSION['role'] == 1) ) {
     include 'affichages/CommandePreparation.php';
-  ?></div>
+    include 'affichages/CommandeServir.php';
+  }
+   ?>
+</div>
+</div>
+
 </section>
 
 <?php include 'footer.php'; ?>

@@ -1,5 +1,6 @@
-<h4>Les commandes ouvertes</h4>
+
 <div class="conteneurFlexC">
+  <h4>Les commandes ouvertes</h4>
 <table>
   <tr>
     <td>N° commande</td>

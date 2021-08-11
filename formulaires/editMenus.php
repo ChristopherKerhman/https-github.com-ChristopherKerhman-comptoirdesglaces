@@ -8,7 +8,7 @@ $data->execute();
     if ($key['acreditation'] == 3){
 
    echo '<form class="" action="formulaires/edit/menus.php" method="post">
-       <label for="online">'.$key['description'].'</label>
+       <label for="online">'.utf8_encode($key['description']).'</label>
        <select class="sizeInpute" name="accreditation">
          <option value="3" selected>En ligne</option>
          <option value="4">Hors ligne</option>

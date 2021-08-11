@@ -1,5 +1,6 @@
 <div id="TOKEN">
-<h3>Générer un token de commande pour le client</h3>
+    <h3>Commande en cours :</h3>
+<h4>Générer un token de commande pour le client</h4>
 
   <form class="" action="formulaires/record/newCommande.php" method="post">
     <input class="sizeInpute" type="hidden" name="tokenCommande" :value="jeton">

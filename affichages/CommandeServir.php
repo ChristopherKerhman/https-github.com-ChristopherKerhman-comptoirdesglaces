@@ -1,5 +1,4 @@
 <div class="conteneurFlexC">
-    <h3>Commandes a livrer aux clients</h3>
 <table>
   <tr>
     <td>N° commande</td>
@@ -9,18 +8,18 @@
     <td>Total à payer</td>
     <td>Statut commande</td>
     <td>Effacer</td>
-    <td>Préparer</td>
+    <td>Servit ?</td>
   </tr>
 <?php
 //Paramètre de brassage du panier
 $number = array("0", "2", "3", "4", "5", "6", "7", "8", "9");
-$requetteSQL = "SELECT `id`, `tokenCommande`, `totalPanier`, `nbrArticle`, `panier`, `numeroTable` FROM `commandesClients` WHERE `valide` = 2";
+$requetteSQL = "SELECT `id`, `tokenCommande`, `totalPanier`, `nbrArticle`, `panier`, `numeroTable` FROM `commandesClients` WHERE `valide` = 4";
   include 'gestionDB/readDB.php';
   $data->execute();
   $data->setFetchMode(PDO::FETCH_ASSOC);
   $dataTraiter = $data->fetchAll();
   if(empty($dataTraiter)) {
-    echo 'aucune commande ouverte';
+    echo 'aucune commande à servir.';
   } else {
     foreach ($dataTraiter as $key) {
         $valide = 'Commande rempli par le client.';
@@ -43,7 +42,7 @@ $requetteSQL = "SELECT `id`, `tokenCommande`, `totalPanier`, `nbrArticle`, `pani
         </form>
         </td>
         <td>
-        <form action="formulaires/edit/commandeValider.php" method="post">
+        <form action="formulaires/edit/commandeServit.php" method="post">
             <input type="hidden" name="id" value="'.$key['id'].'">
             <button class="edit" type="submit" name="button">Valider</button>
         </form>
