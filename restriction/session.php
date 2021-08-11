@@ -5,4 +5,5 @@ if ($_SESSION['role'] < $autorisation) {
   header('location: index.php');
 }
 }
+header("refresh: 180;");
  ?>

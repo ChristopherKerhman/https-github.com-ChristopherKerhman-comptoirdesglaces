@@ -14,7 +14,12 @@ include 'header.php'; ?>
 <article class="">
   <h3>Commande en cours :</h3>
     <p>
-      Section à venir.
+      <?php
+      if ((isset($_SESSION['role'])) && ($_SESSION['role'] == 1)) {
+        include 'gestionCommandes/commandeClient.php';
+        include 'affichages/CommandeOuverte.php';
+      }
+       ?>
     </p>
 </article>
         <?php
@@ -25,13 +30,11 @@ include 'header.php'; ?>
 </div>
   <div class="page">
     <h3>Commande à préparer</h3>
-    <p>
-      Section à venir.
-    </p>
     <?php
   if ((isset($_SESSION['role'])) && ($_SESSION['role'] == 2) ) {
       include 'formulaires/creationUsers.php';
   }
+    include 'affichages/CommandePreparation.php';
   ?></div>
 </section>
 
