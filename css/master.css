@@ -188,6 +188,13 @@ button {
 .del:hover {
   background-color: #ff2424;
 }
+.recCreateur {
+  background-color: #4d63fd;
+}
+.recCreateur:hover {
+  color: white;
+  background-color: #0020ff;
+}
 .rec {
   background-color: #4d63fd;
 }
@@ -195,6 +202,19 @@ button {
   color: white;
   background-color: #0020ff;
 }
+.creme {
+  background-color: #fff4ce;
+}
+.sorbet {
+  background-color: pink;
+}
+.sup {
+  background-color: white;
+}
+.yog {
+  background-color:  #bdfffe;
+}
+
 .search {
   background-color: #b491ff;
 }
