@@ -165,7 +165,6 @@ li {
   border: 1px solid black;
   border-radius: 0.5em;
 }
-
 /*==Button==*/
 button {
   background: none;
@@ -202,6 +201,11 @@ button {
 .search:hover {
   color: white;
   background-color: #9b6cff;
+}
+/*==Les id==*/
+#total {
+  padding-top: 1em;
+  font-weight: bold;
 }
 
 /*==Responsivité==*/

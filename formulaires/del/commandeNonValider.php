@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include '../../gestionDB/readDB.php';
   $data->bindParam(':id', $id);
   $data->execute();
-  header ('location: ../../index.php');
+  header ('location: ../../laboratoire.php');
 } else {
     header ('location: ../../index.php');
 }
