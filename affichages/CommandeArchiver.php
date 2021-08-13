@@ -19,7 +19,7 @@ $requetteSQL = "SELECT `id`, `tokenCommande`, `totalPanier`, `nbrArticle`, `pani
   $data->setFetchMode(PDO::FETCH_ASSOC);
   $dataTraiter = $data->fetchAll();
   if(empty($dataTraiter)) {
-    echo 'Aucune commande a preparer.';
+    echo 'Aucune commande archivée.';
   } else {
     foreach ($dataTraiter as $key) {
     // Permet de brasser la date dans le bon sens.
@@ -31,7 +31,7 @@ $requetteSQL = "SELECT `id`, `tokenCommande`, `totalPanier`, `nbrArticle`, `pani
       $minute = substr($date,14,2);
       $dateHour = $day.'/'.$month.'/'.$year.' - '.$hour.' h '.$minute;
     // Fin du brassage.
-        $valide = 'Commande archiver.';
+        $valide = 'Commande archivée.';
         $panier = $key['panier'];
         $panierStage1 = str_replace($number, "<br />", $panier);
         $panierStage2 = str_replace (".", "", $panierStage1);

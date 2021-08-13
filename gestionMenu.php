@@ -3,8 +3,8 @@ $autorisation = 2;
 include 'header.php';
 ?>
 <section>
+  <h3>Gestion de la mise en ligne des modules du menus</h3>
   <?php
-  echo 'test';
     include 'formulaires/editMenus.php';
    ?>
 </section>
