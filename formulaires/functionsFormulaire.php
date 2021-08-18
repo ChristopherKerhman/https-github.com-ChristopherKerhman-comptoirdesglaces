@@ -45,4 +45,27 @@ function doublon($donnee){
     return false;
   }
 }
+function typeCoupe ($donnee) {
+  $type = '';
+  if ($donnee == 1) {
+    $type = 'Coupette';
+  }
+  if ($donnee == 2) {
+    $type = 'Coupe tradition';
+  }
+  if ($donnee == 3) {
+    $type = 'Coupe au fruits';
+  }
+  if ($donnee == 4) {
+    $type = 'Coupe gourmande';
+  }
+  if ($donnee == 5) {
+    $type = 'Crêpes';
+  }
+  if ($donnee == 6) {
+    $type = 'Crêpes créations';
+  }
+  return $type;
+}
+
  ?>

@@ -19,10 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 // Traitement du formulaire d'enregistrement d'une composition
+$typeComposition = filter($_POST['typeComposition']);
 $nomComposition = filter($_POST['nomComposition']);
 $prixComposition = filter($_POST['prixComposition']);
-$requetteSQL = "INSERT INTO `composition`(`nomComposition`, `prixComposition`, `image`) VALUES (:nomComposition, :prixComposition, :image)";
+$requetteSQL = "INSERT INTO `composition`(`nomComposition`, `prixComposition`, `image`, `typeComposition`) VALUES (:nomComposition, :prixComposition, :image, :typeComposition)";
 include '../../gestionDB/readDB.php';
+$data->bindParam(':typeComposition', $typeComposition);
 $data->bindParam(':nomComposition', $nomComposition);
 $data->bindParam(':prixComposition', $prixComposition);
 $data->bindParam(':image', $image);

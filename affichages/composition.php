@@ -3,6 +3,7 @@
 <table>
   <tr>
     <td>Id Composition</td>
+    <td>Type</td>
     <td>Nom</td>
     <td>Prix</td>
     <td>Images</td>
@@ -11,7 +12,8 @@
   </tr>
 <?php
   include 'gestionDB/identifiantDB.php';
-  $requetteSQL = "SELECT * FROM `composition`";
+  include 'formulaires/functionsFormulaire.php';
+  $requetteSQL = "SELECT * FROM `composition` ORDER BY `idComposition` DESC";
   include 'gestionDB/readDB.php';
   $data->execute();
   $data->setFetchMode(PDO::FETCH_ASSOC);
@@ -20,9 +22,11 @@
     echo 'Aucune composition enregistrées.';
   } else {
     foreach ($dataTraiter as $key) {
+      $type = typeCoupe($key['typeComposition']);
       echo  '
       <tr>
         <td>'.$key['idComposition'].'</td>
+        <td>'.$type.'</td>
         <td>'.$key['nomComposition'].'</td>
         <td>'.$key['prixComposition'].' €</td>
         <td><img src="compositionImages/'.$key['image'].'" alt="coupes '.$key['nomComposition'].'" width=80%></td>
