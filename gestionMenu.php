@@ -1,6 +1,7 @@
 <?php
 $autorisation = 2;
 include 'header.php';
+include 'restriction/securite.php';
 ?>
 <section>
   <h3>Gestion de la mise en ligne des modules du menus</h3>

@@ -1,5 +1,6 @@
 <?php
 $autorisation = 2;
+include 'restriction/securite.php';
   include 'header.php';
   include 'gestionDB/identifiantDB.php';
   include 'formulaires/functionsFormulaire.php';
