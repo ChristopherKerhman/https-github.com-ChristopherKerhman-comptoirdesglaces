@@ -1,5 +1,5 @@
 <div id="TOKEN">
-    <h3>Commande en cours :</h3>
+    <h4>Commande en cours :</h4>
 <h4>Générer un token de commande pour le client</h4>
 
   <form class="" action="formulaires/record/newCommande.php" method="post">

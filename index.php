@@ -16,6 +16,7 @@ include 'header.php'; ?>
       <?php
       if ((isset($_SESSION['role'])) && ($_SESSION['role'] == 1)) {
         include 'gestionCommandes/commandeClient.php';
+        echo '<h3>Commande à préparer</h3>';
         include 'affichages/CommandeOuverte.php';
       }
        ?>
@@ -28,7 +29,6 @@ include 'header.php'; ?>
   ?>
 </div>
   <div class="page">
-    <h3>Commande à préparer</h3>
     <?php
   if ((isset($_SESSION['role'])) && ($_SESSION['role'] == 2) ) {
       include 'formulaires/creationUsers.php';

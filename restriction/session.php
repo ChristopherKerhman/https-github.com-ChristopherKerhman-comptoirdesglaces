@@ -8,9 +8,6 @@ if (empty($_SESSION)) {
 if (($_SESSION['role'] == 0) && (!$_SESSION['identification'])) {
       $requetteSQL= "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation = 0 ORDER BY `idNavigator` ASC";
 }
-/*if (($_SESSION['role'] == 1 && ($_SESSION['identification'])) {
-  $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation = 1 ORDER BY `idNavigator` ASC";
-}*/
 if (($_SESSION['role'] == 1) && ($_SESSION['identification'])) {
    $requetteSQL = "SELECT `idNavigator`, `lien`, `description`, `acreditation` FROM `navigator` WHERE acreditation >= 0 AND acreditation <=1 ORDER BY `idNavigator` ASC";
  }
