@@ -32,7 +32,7 @@ $autorisation = 1;
   <strong v-if="coupe.length > 0" v-on:click="supprimer(compo)">Supprimer la coupe ?</strong>
   <article id="selectionBoule">
       <button class="choixCreateur" v-if="coupe.length === 1" type="button" name="button" v-for="choix in nBoules" v-bind:key="choix" v-on:click="choixNBoules(choix.nBoule)">{{choix.nBoule}} boules - {{choix.prix}} €</button>
-    <div v-if="coupe.length < totalBoules" class="flexRows">
+    <div v-if="coupe.length < totalBoules + 1" class="flexRows">
       <div>
         <h3>Crème glacée</h3>
           <button class="creme" type="button" name="button" v-for="boule in creme" v-bind:key="boule" v-on:click="creationCreme(boule.nom)">{{boule.nom}}</button>
